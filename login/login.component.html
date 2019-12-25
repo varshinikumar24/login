@@ -1,0 +1,24 @@
+<div >
+    <h3>Welcome to {{title}}</h3>
+    
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+
+    <div class="container" >
+        <label class="form-group" for="id"><b>ID</b></label><br>
+        <input  type="text" placeholder="Enter ID" name="id" ngModel class="form-control" required #id="ngModel">
+        <span class="help" *ngIf="!id.valid && id.touched ">Please enter valid Id</span><br>
+
+        <label  class="form-group" for="email"><b>Email</b></label><br>
+        <input type="email" placeholder="Enter Email id" name="email" ngModel  class="form-control" required email #email="ngModel">
+        <span class="help" *ngIf="!email.valid && email.touched ">Please enter valid email address</span><br>
+        <span *ngFor= "let user of user$">
+        <span class="validate" *ngIf="id.value !== user$[id.value].id">Error</span>
+        </span>
+        <button routerLink="details/{{id.value}}" class="btn btn-primary" type="submit" [disabled]="!f.valid" > Login </button>
+      
+    
+      </div>
+
+    </form>
+    
+</div>

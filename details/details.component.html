@@ -1,0 +1,24 @@
+
+<form>
+    
+    <h1> ID - {{user$.id}} details</h1>
+
+    <div class="detail">
+    <strong>id: </strong>{{user$.id}}<br>
+    <strong>name: </strong>{{user$.name}}<br>
+    <strong>username: </strong>{{user$.username}}<br>
+    <strong>Email: </strong>{{user$.email}}<br>
+    <strong>Address </strong><br>
+    <strong>Street: </strong>{{user$.address.street}}<br>
+    <strong>suite: </strong>{{user$.address.suite}}<br>
+    <strong>city: </strong>{{user$.address.city}}<br>
+    <strong>zipcode: </strong>{{user$.address.zipcode}}<br>
+    <strong>geo-lat: </strong>{{user$.address.geo.lat}}<br>
+    <strong>geo-lon: </strong>{{user$.address.geo.lng}}<br>
+    <strong>phone: </strong>phone={{user$.phone}}<br>
+    <strong>website: </strong>website={{user$.website}}<br>
+    <strong>company name: </strong> company={{user$.company.name}}<br>
+    <strong>company-phrase: </strong>{{user$.company.catchPhrase}}<br>
+    <strong>company-bs: </strong>{{user$.company.bs}}<br>
+    </div>
+</form>
